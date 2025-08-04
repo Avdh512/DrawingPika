@@ -2,15 +2,7 @@
 
 **A full-stack photo blog application built with a Python Flask backend and a modern, responsive frontend.**
 
-## 📖 Table of Contents
 
-* [✨ App Features &amp; Highlights ✨](https://claude.ai/chat/01179afa-8114-498b-b925-0c0647165ca8#-app-features--highlights-)
-* [🖼️ Application Screenshots 🖥️](https://claude.ai/chat/01179afa-8114-498b-b925-0c0647165ca8#%EF%B8%8F-application-screenshots-%EF%B8%8F)
-* [🚀 Getting Started: Running the App](https://claude.ai/chat/01179afa-8114-498b-b925-0c0647165ca8#-getting-started-running-the-app)
-* [📁 Project File Structure](https://claude.ai/chat/01179afa-8114-498b-b925-0c0647165ca8#-project-file-structure)
-* [🛠️ Usage &amp; API Endpoints](https://claude.ai/chat/01179afa-8114-498b-b925-0c0647165ca8#%EF%B8%8F-usage--api-endpoints)
-* [🤝 Contribution Guidelines](https://claude.ai/chat/01179afa-8114-498b-b925-0c0647165ca8#-contribution-guidelines)
-* [📄 License Information](https://claude.ai/chat/01179afa-8114-498b-b925-0c0647165ca8#-license-information)
 
 ## ✨ App Features & Highlights ✨
 
@@ -32,33 +24,33 @@
 
 ### Upload & Create Post (Light Mode)
 
-**The main upload form, where users can add new photos and their metadata.
-![Upload & Create Post in Light Mode](https://claude.ai/chat/screenshots/Upload_Photo_Day.png)**
+The main upload form, where users can add new photos and their metadata.
+![Upload & Create Post in Light Mode](screenshots/Upload_Photo_Day.png)
 
 ### Upload & Create Post (Dark Mode)
 
-**The same upload form in dark mode.
-![Upload & Create Post in Dark Mode](https://claude.ai/chat/screenshots/Upload_Photo_Night.png)**
+The same upload form in dark mode.
+![Upload & Create Post in Dark Mode](screenshots/Upload_Photo_Night.png)
 
 ### Edit Photo Details
 
-**Selecting an existing photo from the dropdown to edit its metadata.
-![Edit Photo Details](https://claude.ai/chat/screenshots/Edit_Photos.png)**
+Selecting an existing photo from the dropdown to edit its metadata.
+![Edit Photo Details](screenshots/Edit_Photos.png)
 
 ### Gallery Grid
 
-**Browsing photos in a responsive gallery grid layout.
-![Gallery](https://claude.ai/chat/screenshots/Gallery.png)**
+Browsing photos in a responsive gallery grid layout.
+![Gallery](screenshots/Gallery.png)
 
 ### Calendar View
 
-**A monthly calendar highlighting days with uploaded photos.
-![Calender](https://claude.ai/chat/screenshots/Calender.png)**
+A monthly calendar highlighting days with uploaded photos.
+![Calendar](screenshots/Calender.png)
 
 ### Data & Export
 
-**Viewing and exporting all photo metadata in a JSON format.
-![Data & Export](https://claude.ai/chat/screenshots/Data_Export.png)**
+Viewing and exporting all photo metadata in a JSON format.
+![Data & Export](screenshots/Data_Export.png)
 
 ## 🚀 Getting Started: Running the App
 
@@ -86,10 +78,12 @@
    * **On Windows:**
      ```
      venv\Scripts\activate
+
      ```
    * **On macOS/Linux:**
      ```
      source venv/bin/activate
+
      ```
 3. **Install the dependencies:**
 
@@ -103,6 +97,7 @@
 1. **Start the Flask server:**
    ```
    python server.py
+
    ```
 2. **Access the application:**
    Open your web browser and navigate to `http://127.0.0.1:5000`.
@@ -133,16 +128,16 @@ DrawingPika/
 
 ### 🖥️ Backend API
 
-| **Endpoint**          | **Method** | **Description**                                                         |
-| --------------------------- | ---------------- | ----------------------------------------------------------------------------- |
-| `/`                       | `GET`          | **Serves the main** `index.html`file.                                 |
-| `/api/photos`             | `GET`          | **Retrieves all photo metadata, organized by date.**                    |
-| `/upload`                 | `POST`         | **Uploads a new photo and saves its metadata.**                         |
-| `/api/update_metadata`    | `POST`         | **Updates metadata for a specific photo, including physical rotation.** |
-| `/delete`                 | `POST`         | **Deletes a photo and its metadata.**                                   |
-| `/photos/<path:filename>` | `GET`          | **Serves a specific photo file from the** `photos`directory.          |
-| `/api/metadata`           | `GET`          | **Retrieves all raw photo metadata.**                                   |
-| `/api/stats`              | `GET`          | **Provides statistics about the photo collection.**                     |
+| **Endpoint**                                        | **Method**                       | **Description**                                                                              |
+| --------------------------------------------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `/`                       | `GET`  | **Serves the main** `index.html`file.                        |
+| `/api/photos`             | `GET`  | **Retrieves all photo metadata, organized by date.**                                         |
+| `/upload`                 | `POST` | **Uploads a new photo and saves its metadata.**                                              |
+| `/api/update_metadata`    | `POST` | **Updates metadata for a specific photo, including physical rotation.**                      |
+| `/delete`                 | `POST` | **Deletes a photo and its metadata.**                                                        |
+| `/photos/<path:filename>` | `GET`  | **Serves a specific photo file from the** `photos`directory. |
+| `/api/metadata`           | `GET`  | **Retrieves all raw photo metadata.**                                                        |
+| `/api/stats`              | `GET`  | **Provides statistics about the photo collection.**                                          |
 
 ## 🤝 Contribution Guidelines
 
