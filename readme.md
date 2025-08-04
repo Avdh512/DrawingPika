@@ -20,7 +20,7 @@
 
 ## 🖼️ Application Screenshots 🖥️
 
-**Here is a visual overview of the application's key features. These screenshots are located in the **`screenshots` folder within your project repository, with the specified file paths.
+Here is a visual overview of the application's key features. These screenshots are located in the `screenshots` folder within your project repository, with the specified file paths.
 
 ### Upload & Create Post (Light Mode)
 
@@ -102,7 +102,7 @@ Viewing and exporting all photo metadata in a JSON format.
 2. **Access the application:**
    Open your web browser and navigate to `http://127.0.0.1:5000`.
 
-**The server will automatically create the necessary **`photos` and `public` directories, as well as an empty `photo_metadata.json` file if they don't already exist.
+The server will automatically create the necessary `photos` and `public` directories, as well as an empty `photo_metadata.json` file if they don't already exist.
 
 ## 📁 Project File Structure
 
@@ -124,7 +124,7 @@ DrawingPika/
 
 ### 🌐 Frontend
 
-**The **`index.html` file is a self-contained single-page application. All client-side logic is handled by the embedded JavaScript.
+The `index.html` file is a self-contained single-page application. All client-side logic is handled by the embedded JavaScript.
 
 ### 🖥️ Backend API
 
