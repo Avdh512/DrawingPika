@@ -34,17 +34,17 @@
 ### Upload & Create Post (Light Mode)
 
 **The main upload form, where users can add new photos and their metadata.
-![Upload & Create Post in Light Mode](screenshots/Upload Photo Day.png)**
+![Upload & Create Post in Light Mode](screenshots/Upload_Photo_Day.png)**
 
 ### Upload & Create Post (Dark Mode)
 
 **The same upload form in dark mode.
-![Upload & Create Post in Dark Mode](screenshots/Upload Photo Night.png)**
+![Upload & Create Post in Dark Mode](screenshots/Upload_Photo_Night.png)**
 
 ### Edit Photo Details
 
 **Selecting an existing photo from the dropdown to edit its metadata.
-![Edit Photo Details](screenshots/Edit Photos.png)**
+![Edit Photo Details](screenshots/Edit_Photos.png)**
 
 ### Gallery Grid
 
@@ -57,7 +57,7 @@
 ### Data & Export
 
 **Viewing and exporting all photo metadata in a JSON format.
-![Data & Export](screenshots/Data Export.png)**
+![Data & Export](screenshots/Data_Export.png)**
 
 ## 🚀 Getting Started: Running the App
 
