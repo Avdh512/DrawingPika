@@ -49,11 +49,11 @@
 ### Gallery Grid
 
 **Browsing photos in a responsive gallery grid layout.**
-
+![Gallery](screenshots/Gallery.png)**
 ### Calendar View
 
 **A monthly calendar highlighting days with uploaded photos.**
-
+![Calender](screenshots/Calender.png)**
 ### Data & Export
 
 **Viewing and exporting all photo metadata in a JSON format.
