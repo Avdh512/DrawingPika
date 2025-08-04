@@ -48,11 +48,11 @@
 
 ### Gallery Grid
 
-**Browsing photos in a responsive gallery grid layout.**
+**Browsing photos in a responsive gallery grid layout.
 ![Gallery](screenshots/Gallery.png)**
 ### Calendar View
 
-**A monthly calendar highlighting days with uploaded photos.**
+**A monthly calendar highlighting days with uploaded photos.
 ![Calender](screenshots/Calender.png)**
 ### Data & Export
 
@@ -71,11 +71,11 @@
 1. **Clone the repository:**
 
    ```
-   git clone [your-repository-url]
+   git clone https://github.com/Avdh512/DrawingPika.git
    cd DrawingPika
 
    ```
-2. **Create a virtual environment** (recommended):
+2. **Create a virtual environment** (recommended) or you can just use the exisiting one that i made:
 
    ```
    python -m venv venv
