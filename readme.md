@@ -5,13 +5,13 @@
 
 ## 📖 Table of Contents
 
-* [✨ App Features &amp; Highlights ✨](https://www.google.com/search?q=%23%EF%B8%8F-app-features--highlights-%EF%B8%8F "null")
-* [🖼️ Application Screenshots 🖥️](https://www.google.com/search?q=%23%EF%B8%8F-application-screenshots-%EF%B8%8F "null")
-* [🚀 Getting Started: Running the App](https://www.google.com/search?q=%23%EF%B8%8F-getting-started-running-the-app "null")
-* [📁 Project File Structure](https://www.google.com/search?q=%23-project-file-structure "null")
-* [🛠️ Usage &amp; API Endpoints](https://www.google.com/search?q=%23%EF%B8%8F-usage--api-endpoints "null")
-* [🤝 Contribution Guidelines](https://www.google.com/search?q=%23-contribution-guidelines "null")
-* [📄 License Information](https://www.google.com/search?q=%23-license-information "null")
+* [✨ App Features &amp; Highlights ✨](https://www.google.com/search?q=%23app-features--highlights "null")
+* [🖼️ Application Screenshots 🖥️](https://www.google.com/search?q=%23application-screenshots "null")
+* [🚀 Getting Started: Running the App](https://www.google.com/search?q=%23getting-started-running-the-app "null")
+* [📁 Project File Structure](https://www.google.com/search?q=%23project-file-structure "null")
+* [🛠️ Usage &amp; API Endpoints](https://www.google.com/search?q=%23usage--api-endpoints "null")
+* [🤝 Contribution Guidelines](https://www.google.com/search?q=%23contribution-guidelines "null")
+* [📄 License Information](https://www.google.com/search?q=%23license-information "null")
 
 ## ✨ App Features & Highlights ✨
 
@@ -33,21 +33,18 @@
 
 ### Upload & Create Post (Light Mode)
 
-The main upload form, where users can add new photos and their metadata.
-
-![Upload & Create Post in Light Mode](DrawingPika/screenshots/Upload Photo Day.png)
+**The main upload form, where users can add new photos and their metadata.
+![Upload & Create Post in Light Mode](screenshots/Upload Photo Day.png)**
 
 ### Upload & Create Post (Dark Mode)
 
-The same upload form in dark mode.
-
-![Upload & Create Post in Dark Mode](DrawingPika/screenshots/Upload Photo Night.png)
+**The same upload form in dark mode.
+![Upload & Create Post in Dark Mode](screenshots/Upload Photo Night.png)**
 
 ### Edit Photo Details
 
-Selecting an existing photo from the dropdown to edit its metadata.
-
-![Edit Photo Details](DrawingPika/screenshots/Edit Photos.png)
+**Selecting an existing photo from the dropdown to edit its metadata.
+![Edit Photo Details](screenshots/Edit Photos.png)**
 
 ### Gallery Grid
 
@@ -59,9 +56,8 @@ Selecting an existing photo from the dropdown to edit its metadata.
 
 ### Data & Export
 
-Viewing and exporting all photo metadata in a JSON format.
-
-![Data & Export](DrawingPika/screenshots/Data Export.png)
+**Viewing and exporting all photo metadata in a JSON format.
+![Data & Export](screenshots/Data Export.png)**
 
 ## 🚀 Getting Started: Running the App
 
@@ -110,8 +106,8 @@ Viewing and exporting all photo metadata in a JSON format.
    python server.py
 
    ```
-2. Access the application:
-   Open your web browser and navigate to http://127.0.0.1:5000.
+2. **Access the application:**
+   Open your web browser and navigate to `<span class="selected">http://127.0.0.1:5000</span>`.
 
 **The server will automatically create the necessary **`<span class="selected">photos</span>` and `<span class="selected">public</span>` directories, as well as an empty `<span class="selected">photo_metadata.json</span>` file if they don't already exist.
 
