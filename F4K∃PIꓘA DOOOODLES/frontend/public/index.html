@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F4K∃PIꓘA DOOOODLES</title>
+    <!-- Link to external CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <!-- Top Fixed Navigation Bar -->
+    <div class="navbar">
+        <button class="navbar-toggler" onclick="toggleNavMenu()">☰</button>
+        <div class="nav-buttons">
+            <button class="nav-btn active" onclick="showSection('upload')">
+                📤 Upload & Create Post
+            </button>
+            <button class="nav-btn" onclick="showSection('bulk-upload')">
+                🚀 Bulk Upload (AI Naming)
+            </button>
+            <button class="nav-btn" onclick="showSection('edit-photos')">
+                ✏️ Edit Photos
+            </button>
+            <button class="nav-btn" onclick="showSection('blog-gallery')">
+                📖 Photo Blog
+            </button>
+            <button class="nav-btn" onclick="showSection('grid-gallery')">
+                🖼️ Gallery Grid
+            </button>
+            <button class="nav-btn" onclick="showSection('calendar')">
+                📅 Calendar View
+            </button>
+            <button class="nav-btn" onclick="showSection('data')">
+                📁 Data & Export
+            </button>
+            <button class="nav-btn" onclick="showSection('delete-data')">
+                🗑️ Delete Data
+            </button>
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle - Top Right Corner -->
+    <div id="darkModeContainer">
+        <button id="darkModeToggle" onclick="toggleDarkMode()">
+            ☀️ <!-- Default to sun icon (light mode) -->
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>F4K∃PIꓘA DOOOODLES</h1>
+            <div class="datetime-display" id="datetime"></div>
+        </div>
+
+        <!-- Upload Section (Single Photo) -->
+        <div id="upload" class="section active">
+            <div class="content-card">
+                <h2 class="section-title">📤 Create New Photo Post</h2>
+                
+                <div class="upload-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="photoTitle">📝 Photo Title/Name <span style="color: red;">*</span></label>
+                            <input type="text" id="photoTitle" class="form-input" placeholder="Enter a custom name for your photo..." required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="photoDate">📅 Photo Date <span style="color: red;">*</span></label>
+                            <input type="date" id="photoDate" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="photoTime">🕒 Photo Time <span style="color: red;">*</span></label>
+                            <input type="time" id="photoTime" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="photoLocation">📍 Location (Optional)</label>
+                            <input type="text" id="photoLocation" class="form-input" placeholder="Where was this taken?">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label class="form-label" for="photoDescription">📖 Description/Story</label>
+                        <textarea id="photoDescription" class="form-input form-textarea" placeholder="Tell the story behind this photo... What was happening? How did you feel? Any memories you want to capture?"></textarea>
+                    </div>
+                </div>
+
+                <div id="singleUploadStatusMessage" class="status-message"></div>
+                
+                <div class="upload-area" onclick="document.getElementById('fileInput').click()" 
+                     ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-text">Click to select photos or drag & drop</div>
+                    <div class="upload-subtext">Supports JPG, PNG, GIF • Multiple files allowed</div>
+                    <input type="file" id="fileInput" class="file-input" multiple accept="image/*" onchange="handleFileSelect(event)">
+                </div>
+
+                <div id="selectedFilesPreview" style="margin-top: 20px; padding: 15px; border: 1px dashed var(--light-border); border-radius: 10px; background: var(--upload-area-bg); display: none; text-align: center; color: var(--text-color);">
+                    <strong>Selected Files:</strong><br>
+                    <ul id="fileList" style="list-style-type: none; padding: 0; margin-top: 10px;"></ul>
+                </div>
+
+                <button class="action-btn" id="submitSingleUploadBtn" onclick="uploadSinglePhoto()" disabled>
+                    🚀 Submit Photo Post
+                </button>
+            </div>
+        </div>
+
+        <!-- Bulk Upload Section (AI Naming) -->
+        <div id="bulk-upload" class="section">
+            <div class="content-card">
+                <h2 class="section-title">🚀 Bulk Upload Photos (AI Naming)</h2>
+                <div id="bulkStatusMessage" class="status-message"></div>
+                
+                <div class="upload-area" onclick="document.getElementById('bulkFileInput').click()" 
+                     ondrop="handleBulkDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                    <div class="upload-icon">📂</div>
+                    <div class="upload-text">Drag & drop multiple images here or click to select</div>
+                    <div class="upload-subtext">Supports JPG, PNG, GIF • AI will generate titles</div>
+                    <input type="file" id="bulkFileInput" class="file-input" multiple accept="image/*" onchange="handleBulkFileSelect(event)">
+                </div>
+
+                <div id="bulkSelectedFilesPreview" style="margin-top: 20px; padding: 15px; border: 1px dashed var(--light-border); border-radius: 10px; background: var(--upload-area-bg); display: none; text-align: center; color: var(--text-color);">
+                    <strong>Selected Files for Bulk Upload:</strong><br>
+                    <ul id="bulkFileList" style="list-style-type: none; padding: 0; margin-top: 10px;"></ul>
+                </div>
+                
+                <button class="action-btn" id="submitBulkUploadBtn" onclick="bulkUploadPhotos()" disabled>
+                    ✨ Upload All Photos & Get AI Names
+                </button>
+            </div>
+        </div>
+        
+        <!-- Edit Photos Section -->
+        <div id="edit-photos" class="section">
+            <div class="content-card">
+                <h2 class="section-title">✏️ Edit Photo Details</h2>
+                
+                <div class="form-group full-width" style="margin-bottom: 30px;">
+                    <label class="form-label" for="editPhotoSelect">Select Photo to Edit</label>
+                    <select id="editPhotoSelect" class="form-select" onchange="onPhotoSelectedForEdit(event)">
+                        <option value="">-- Select a photo --</option>
+                    </select>
+                </div>
+
+                <img id="editImagePreview" class="edit-image-preview" src="" alt="Selected Photo Preview" style="display: none;">
+                
+                <div class="edit-form" id="editFormFields" style="display: none;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="editPhotoTitle">📝 Photo Title/Name <span style="color: red;">*</span></label>
+                            <input type="text" id="editPhotoTitle" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="editPhotoDate">📅 Photo Date <span style="color: red;">*</span></label>
+                            <input type="date" id="editPhotoDate" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="editPhotoTime">🕒 Photo Time <span style="color: red;">*</span></label>
+                            <input type="time" id="editPhotoTime" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="editPhotoLocation">📍 Location (Optional)</label>
+                            <input type="text" id="editPhotoLocation" class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label class="form-label" for="editPhotoDescription">📖 Description/Story</label>
+                        <textarea id="editPhotoDescription" class="form-input form-textarea"></textarea>
+                    </div>
+
+                    <div class="form-group full-width" style="text-align: center; margin-top: 20px;">
+                        <button class="action-btn" id="rotateImageBtn" onclick="rotateImage()" style="background: #f39c12;">
+                            🔄 Rotate Image (90°)
+                        </button>
+                    </div>
+
+                    <button class="action-btn" id="saveEditBtn" onclick="saveEditedPhoto()">
+                        💾 Save Changes
+                    </button>
+                </div>
+                <div id="editStatusMessage"></div>
+            </div>
+        </div>
+
+
+        <!-- Blog Gallery Section -->
+        <div id="blog-gallery" class="section">
+            <div class="content-card">
+                <h2 class="section-title">📖 Photo Blog</h2>
+                <div class="blog-gallery" id="blogGallery"></div>
+            </div>
+        </div>
+
+        <!-- Grid Gallery Section -->
+        <div id="grid-gallery" class="section">
+            <div class="content-card">
+                <h2 class="section-title">🖼️ Gallery Grid</h2>
+                <div class="gallery-grid" id="galleryGrid"></div>
+            </div>
+        </div>
+
+        <!-- Calendar Section -->
+        <div id="calendar" class="section">
+            <div class="content-card">
+                <h2 class="section-title">📅 Calendar View</h2>
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <button class="calendar-nav" onclick="previousMonth()">‹ Previous</button>
+                        <div class="calendar-month" id="currentMonth"></div>
+                        <button class="calendar-nav" onclick="nextMonth()">Next ›</button>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Section -->
+        <div id="data" class="section">
+            <div class="content-card">
+                <h2 class="section-title">📁 Data & Export</h2>
+                <div style="margin-bottom: 20px; text-align: center;">
+                    <button class="action-btn" onclick="downloadJSON()">💾 Download JSON Data</button>
+                    <button class="action-btn" onclick="refreshData()" style="background: #f39c12;">🔄 Refresh Data</button>
+                </div>
+                <div class="json-viewer" id="jsonViewer"></div>
+            </div>
+        </div>
+
+        <!-- Delete Data Section -->
+        <div id="delete-data" class="section">
+            <div class="content-card">
+                <h2 class="section-title">🗑️ Delete Photos & Data</h2>
+                <div class="delete-options">
+                    <button class="delete-btn" onclick="deleteAllPhotos()">Permanently Delete All Photos</button>
+                    <div class="delete-info">This will remove all uploaded photos from the server's photos folder. This action cannot be undone.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Screen Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-info" id="modalInfo"></div>
+    </div>
+        
+    <!-- Link to external JavaScript file -->
+    <script src="static/script.js"></script>
+</body>
+</html>
