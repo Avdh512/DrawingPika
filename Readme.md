@@ -37,38 +37,38 @@ Here is a visual overview of the application's key features. These screenshots s
 
 ### 📋 Main Menu & Navigation
 
-![Main Menu](https://claude.ai/chat/screenshots/mainmenu.png)
+![Main Menu](Screenshots/mainmenu.png)
 *The application's main navigation interface*
 
 ### 📤 Upload & Create Post
 
-![Bulk Upload](https://claude.ai/chat/screenshots/bulk%20upload.png)
+![Bulk Upload](Screenshots/bulk%20upload.png)
 *Bulk upload interface with AI-powered photo analysis*
 
 ### 🖼️ Gallery Views
 
-![Gallery Grid](https://claude.ai/chat/screenshots/gallery.png)
+![Gallery Grid](Screenshots/gallery.png)
 *Responsive gallery grid layout for browsing photos*
 
 ### 📅 Calendar View
 
-![Calendar View](https://claude.ai/chat/screenshots/calender.png)
+![Calendar View](Screenshots/calender.png)
 *Monthly calendar highlighting days with uploaded photos*
 
 ### ✏️ Photo Management
 
-![Edit Photo 1](https://claude.ai/chat/screenshots/edit1.png)
+![Edit Photo 1](Screenshots/edit1.png)
 *Photo editing interface - Main view*
 
-![Edit Photo 2](https://claude.ai/chat/screenshots/edit2.png)
+![Edit Photo 2](Screenshots/edit2.png)
 *Photo editing interface - Advanced options*
 
 ### 📊 Data Management
 
-![Export Data](https://claude.ai/chat/screenshots/export.png)
+![Export Data](Screenshots/export.png)
 *Data export and JSON metadata viewer*
 
-![Delete All](https://claude.ai/chat/screenshots/delte%20all.png)
+![Delete All](Screenshots/delte%20all.png)
 *Data management and deletion interface*
 
 ## 🚀 Getting Started: Running the App
