@@ -1,4 +1,6 @@
 📸 F4K∃PIꓘA DOOOODLES 📝
+
+
 A full-stack photo blog application built with a Python Flask backend and a modern, responsive frontend.
 
 This project is a significantly enhanced prototype of a previous version, now offering a richer set of features for managing and displaying your photo collection.
